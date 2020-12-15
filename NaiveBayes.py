@@ -9,15 +9,11 @@ class NaiveBayes:
         self.N = len(all_terms)
         self.neg_docs = []
         self.pos_docs = []
-
-
-    def train(self):
         for i in range(0,len(self.y)):
             if self.y[i] == 1:
                 self.pos_docs.append(self.x[i])
             else:
                 self.neg_docs.append(self.x[i])
-
 
     def test(self,X):
         y = []
